@@ -3,6 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.chengzi</groupId>
+    <artifactId>springboot-quick</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>springboot-quick</name>
+    <description>Demo project for Spring Boot</description>
+
     <!--导入Spring Boot相关的依赖-->
     <parent>
         <!--用来管理SpringBoot里面所有依赖的版本-->
@@ -12,21 +19,25 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.chengzi</groupId>
-    <artifactId>springboot-quick</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-quick</name>
-    <description>Demo project for Spring Boot</description>
-
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
-        <!--各个不同服务的启动器-->
+        <!--starter 各个不同服务的启动器-->
+        <!--引入web模块-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--引入jquery-webjar-->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>3.5.1</version>
         </dependency>
 
         <!--springboot测试用的-->
