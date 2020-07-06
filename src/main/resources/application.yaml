@@ -9,7 +9,12 @@ person:
     - lisi
     - zhaoliu
   last-name: xiaoliu
+spring:
+  messages:
+    basename: i18n.login
 
+  thymeleaf:
+    cache: false
 logging:
   pattern:
     console: 【%thread】  %-5level [%logger{50}] %msg %n

@@ -40,6 +40,13 @@
             <version>3.5.1</version>
         </dependency>
 
+        <!--引入bootstrap-webjar-->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>4.5.0</version>
+        </dependency>
+
         <!--springboot测试用的-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
