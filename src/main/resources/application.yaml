@@ -11,10 +11,18 @@ person:
   last-name: xiaoliu
 spring:
   messages:
-    basename: i18n.login
+    basename: i18n.login #国际化
+
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true #开启hidden标签的_method效果
+    format:
+      date: yyyy-MM-dd #格式化日期
 
   thymeleaf:
-    cache: false
+    cache: false  #关闭thymeleaf缓存，可以ctrl+f9刷新页面
+
 logging:
   pattern:
-    console: 【%thread】  %-5level [%logger{50}] %msg %n
+    console: 【%thread】 [%-5level] [%logger{50}] [%msg] %n
