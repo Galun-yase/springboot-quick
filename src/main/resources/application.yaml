@@ -9,6 +9,8 @@ person:
     - lisi
     - zhaoliu
   last-name: xiaoliu
+
+
 spring:
   messages:
     basename: i18n.login #国际化

@@ -1,6 +1,5 @@
 package com.chengzi.config;
 
-import com.chengzi.component.LoginHandlerInterceptor;
 import com.chengzi.component.MyLocaleResolver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -36,8 +35,8 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {
             //注册拦截器
             @Override
             public void addInterceptors(InterceptorRegistry registry) {
-                registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**").
-                        excludePathPatterns("/index.html","/","/user/login");
+//                registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**").
+//                        excludePathPatterns("/index.html","/","/user/login");
             }
         };
 
