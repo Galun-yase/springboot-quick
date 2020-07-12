@@ -9,6 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.SQLException;
+
 @RunWith(SpringRunner.class)  //用Spring驱动器跑而不是junit
 @SpringBootTest               //表明为SpringBoot单元测试
 class SpringbootQuickApplicationTests {
@@ -18,11 +22,16 @@ class SpringbootQuickApplicationTests {
     //记录器
     Logger logger = LoggerFactory.getLogger(SpringbootQuickApplicationTests.class);
 
-    @Test
-    void contextLoads() {
-        //System.out.println(person);
-        logger.warn("aaaa");
+    @Autowired
+    DataSource dataSource;
 
+    @Test
+    void contextLoads() throws SQLException {
+
+        System.out.println("数据源：  "+dataSource.getClass());
+
+        Connection connection = dataSource.getConnection();
+        System.out.println("链接：  "+connection);
 
     }
 
